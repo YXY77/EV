@@ -1,0 +1,88 @@
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import warnings
+import matplotlib.pyplot as plt
+
+#Set to seaborn style
+sns.set()
+#Don't show warning
+warnings.filterwarnings("ignore")
+plt.rcParams['font.sans-serif'] = ['SimHei']  #Show Chinese
+plt.rcParams['axes.unicode_minus']=False #Used to display the negative sign normally
+
+#Read data
+datas = pd.read_csv('Electric_Vehicle_Population_Data.csv')
+datas
+
+#Calculate the number of electric vehicle types
+df = datas.groupby('Electric Vehicle Type').size()
+df
+
+Electric Vehicle Type
+Battery Electric Vehicle (BEV)            58465
+Plug-in Hybrid Electric Vehicle (PHEV)    21302
+dtype: int64
+
+#New canvas
+plt.figure(figsize = (5,5))
+plt.pie(list(df.values.astype(float)),labels = list(df.index),autopct='%.1f%%')
+plt.title('Percentage of electric vehicle types')
+plt.ylabel('')
+plt.savefig('figure/Percentage of electric vehicle types.png',bbox_inches = 'tight',dpi = 300)
+plt.show()
+
+#Calculate the number per year
+df = datas.groupby('Model Year').size().iloc[:-1]
+df
+
+#Draw a line chart
+plt.figure()
+plt.plot(df.index,df.values)
+plt.title('Number of electric vehicles in each year')
+plt.ylabel('count')
+plt.xlabel('year')
+plt.xticks(rotation = 90)
+plt.savefig('figure/Number of electric vehicles in each year.png',bbox_inches = 'tight',dpi = 300)
+plt.show()
+
+#Draw a box plot
+plt.figure(figsize = (8,6))
+sns.boxplot(x="Electric Vehicle Type", y="Electric Range", data=datas)
+plt.title('Distribution of endurance of different types of electric vehicles')
+plt.savefig('figure/Distribution of endurance of different types of electric vehicles.png',bbox_inches = 'tight',dpi = 300)
+plt.show()
+
+plt.figure()
+sns.countplot(x="Model Year", hue="Electric Vehicle Type", data=datas[datas['Model Year'] != 2022])
+plt.title('The annual number of different types of electric vehicles')
+plt.xticks(rotation = 90)
+plt.savefig('figure/The annual number of different types of electric vehicles.png',bbox_inches = 'tight',dpi = 300)
+plt.show()
+
+#The average level of Legislative District of different brands, and sorted
+df = datas.groupby('Make')['Legislative District'].mean().sort_values()
+df
+
+plt.figure(figsize = (5,7))
+plt.barh(df.index,df.values)
+plt.title('Average level of the number of manufacturers')
+plt.xlabel('Legislative District')
+plt.ylabel('Make')
+plt.savefig('figure/Average level of the number of manufacturers.png',bbox_inches = 'tight',dpi = 300)
+plt.show()
+
+#Calculate the number of each brand per year
+dff = pd.crosstab(datas["Make"],datas["Model Year"],datas['City'],aggfunc=len)
+#Fill in missing values with 0
+dff = dff.fillna(0)
+dff
+
+dff=dff.drop(2022,axis=1)
+plt.figure(figsize = (15,15))
+#Draw a heat map
+sns.heatmap(dff, annot=True, fmt=".0f",cmap = 'Blues',alpha = 0.7)
+plt.title('Sales ranking of each manufacturer in each year')
+plt.savefig('figure/Sales ranking of each manufacturer in each year.png',bbox_inches = 'tight',dpi = 300)
+plt.show()
+
