@@ -1,0 +1,73 @@
+"GeoFips","GeoName","N_Employment"
+"53000","Washington",4647252
+"53001","Adams, WA",9840
+"53003","Asotin, WA",9437
+"53005","Benton, WA",116295
+"53007","Chelan, WA",56056
+"53009","Clallam, WA",35171
+"53011","Clark, WA",241829
+"53013","Columbia, WA",2389
+"53015","Cowlitz, WA",51607
+"53017","Douglas, WA",17220
+"53019","Ferry, WA",2784
+"53021","Franklin, WA",43940
+"53023","Garfield, WA",1144
+"53025","Grant, WA",50380
+"53027","Grays Harbor, WA",31509
+"53029","Island, WA",36502
+"53031","Jefferson, WA",15919
+"53033","King, WA",1866858
+"53035","Kitsap, WA",139206
+"53037","Kittitas, WA",23308
+"53039","Klickitat, WA",11596
+"53041","Lewis, WA",37629
+"53043","Lincoln, WA",4967
+"53045","Mason, WA",21430
+"53047","Okanogan, WA",23585
+"53049","Pacific, WA",10132
+"53051","Pend Oreille, WA",5019
+"53053","Pierce, WA",460186
+"53055","San Juan, WA",11925
+"53057","Skagit, WA",72221
+"53059","Skamania, WA",3798
+"53061","Snohomish, WA",412286
+"53063","Spokane, WA",312741
+"53065","Stevens, WA",17781
+"53067","Thurston, WA",157297
+"53069","Wahkiakum, WA",1546
+"53071","Walla Walla, WA",36827
+"53073","Whatcom, WA",131309
+"53075","Whitman, WA",27027
+"53077","Yakima, WA",136556
+"53998","Washington (Metropolitan Portion)",4283450
+"53999","Washington (Nonmetropolitan Portion) *",363802
+"13380","Bellingham, WA (Metropolitan Statistical Area)",131309
+"14740","Bremerton-Silverdale-Port Orchard, WA (Metropolitan Statistical Area)",139206
+"28420","Kennewick-Richland, WA (Metropolitan Statistical Area)",160235
+"30300","Lewiston, ID-WA (Metropolitan Statistical Area)",36318
+"31020","Longview, WA (Metropolitan Statistical Area)",51607
+"34580","Mount Vernon-Anacortes, WA (Metropolitan Statistical Area)",72221
+"36500","Olympia-Lacey-Tumwater, WA (Metropolitan Statistical Area)",157297
+"38900","Portland-Vancouver-Hillsboro, OR-WA (Metropolitan Statistical Area)",1642485
+"42660","Seattle-Tacoma-Bellevue, WA (Metropolitan Statistical Area)",2739330
+"44060","Spokane-Spokane Valley, WA (Metropolitan Statistical Area)",330522
+"47460","Walla Walla, WA (Metropolitan Statistical Area)",36827
+"48300","Wenatchee, WA (Metropolitan Statistical Area)",73276
+"49420","Yakima, WA (Metropolitan Statistical Area)",136556
+"10140","Aberdeen, WA (Micropolitan Statistical Area)",31509
+"16500","Centralia, WA (Micropolitan Statistical Area)",37629
+"21260","Ellensburg, WA (Micropolitan Statistical Area)",23308
+"34180","Moses Lake, WA (Micropolitan Statistical Area)",50380
+"36020","Oak Harbor, WA (Micropolitan Statistical Area)",36502
+"36830","Othello, WA (Micropolitan Statistical Area)",9840
+"38820","Port Angeles, WA (Micropolitan Statistical Area)",35171
+"39420","Pullman, WA (Micropolitan Statistical Area)",27027
+"43220","Shelton, WA (Micropolitan Statistical Area)",21430
+"89313","Kennewick-Richland-Walla Walla, WA (Combined Statistical Area)",197062
+"89393","Moses Lake-Othello, WA (Combined Statistical Area)",60220
+"89440","Portland-Vancouver-Salem, OR-WA (Combined Statistical Area)",2043764
+"89446","Pullman-Moscow, WA-ID (Combined Statistical Area)",49967
+"89500","Seattle-Tacoma, WA (Combined Statistical Area)",3203615
+"89518","Spokane-Spokane Valley-Coeur d'Alene, WA-ID (Combined Statistical Area)",424707
+"42644","Seattle-Bellevue-Kent, WA (Metropolitan Division)",2279144
+"45104","Tacoma-Lakewood, WA (Metropolitan Division)",460186
