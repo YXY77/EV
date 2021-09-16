@@ -90,12 +90,10 @@ def plotting_map(Washington,variable_name):
         xytext = row['geometry'].centroid.coords[:]
         ax.annotate(row['County'], xy=xy[0], xytext=xytext[0],
                      horizontalalignment='center', verticalalignment='center', fontsize=5)
-    if 'Number' in variable_name:
-        ax.set_title('The '+variable_name+' in Washington', fontdict={
+    ax.set_title('The Number of '+variable_name+' in Washington', fontdict={
                  'fontsize': '16', 'fontweight': '1'})
-    else:
-        ax.set_title('The Number of '+variable_name+' in Washington', fontdict={
-                     'fontsize': '16', 'fontweight': '1'})
+    ax.annotate('Data source: Data.WA.gov', xy=(0.1, .12),  xycoords='figure fraction',
+                horizontalalignment='left', verticalalignment='top', fontsize=12, color='#555555')
     plt.savefig(variable_name+'.png')
 
 
@@ -126,4 +124,6 @@ def plotting_cluster(Washington,variable_name):
                      horizontalalignment='center', verticalalignment='center', fontsize=5)
     ax.set_title('The Number of '+variable_name+' in Washington', fontdict={
                  'fontsize': '16', 'fontweight': '1'})
+    ax.annotate('Data source: Data.WA.gov', xy=(0.1, .12),  xycoords='figure fraction',
+                horizontalalignment='left', verticalalignment='top', fontsize=12, color='#555555')
     plt.savefig(variable_name+'.png')
